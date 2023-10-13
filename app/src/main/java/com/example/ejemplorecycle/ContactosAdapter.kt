@@ -1,6 +1,7 @@
 package com.example.ejemplorecycle
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ejemplorecycle.databinding.ItemContactoBinding
@@ -10,9 +11,28 @@ class ContactosAdapter(private val contactos :List<Contacto>, private val contac
     :RecyclerView.Adapter<ContactosAdapter.ViewHolder>() {
     class ViewHolder(private val binding: ItemContactoBinding)
         : RecyclerView.ViewHolder(binding.root){
+            var expand: Boolean = true;
             fun bind(contacto:Contacto){
-                binding.Nombre.text = contacto.nombre
-                binding.Tlfno.text = contacto.tfno
+                var iniciales :String = ""
+
+                var lista=listOf(binding.Nombre.text.split(" "))
+
+                for(iniciales in lista){
+
+                }
+
+                binding.Imagen.setOnClickListener(object: View.OnClickListener{
+                    override fun onClick(p0: View?) {
+                        if(!expand){
+                            binding.Nombre.text = iniciales
+                            expand = true
+                        }else{
+                            binding.Nombre.text = contacto.nombre
+                            binding.Tlfno.text = contacto.tfno
+                            expand = false
+                        }
+                    }
+                })
             }
         }
 
