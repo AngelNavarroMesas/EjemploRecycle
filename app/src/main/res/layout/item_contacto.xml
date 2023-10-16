@@ -7,12 +7,12 @@
 
     <ImageView
         android:id="@+id/Imagen"
-        android:layout_width="100dp"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_weight="1"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
+        android:layout_margin="5dp"
+        android:layout_weight="1.5"
+        android:src="@drawable/imgmujer"
+        app:srcCompat="@drawable/imghombre" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,7 +35,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="nombre"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
@@ -43,7 +42,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Telefono"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
     </LinearLayout>
 </LinearLayout>
